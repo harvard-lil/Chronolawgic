@@ -1,2 +1,2 @@
-# Cronolawgic
+# Chronolawgic
 A legal timeline tool
