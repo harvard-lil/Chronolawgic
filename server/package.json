@@ -1,0 +1,14 @@
+{
+  "author": "LIL",
+  "dependencies": {
+    "express": "~4.17.1"
+  },
+  "description": "Back-end for Chronolawgic legal timeline tool",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "chronolawgic-server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
