@@ -1,9 +1,10 @@
-const express = require('express');
-const app = express();
+
+const express = require('express')
+const cors = require('cors')
+const app = express()
 const port = 3000;
 
-
-app.get('/', ((req, res) => res.send(
+app.get('/', cors(), ((req, res) => res.send(
     { "title": "Some Timeline",
         "categories": {
             "Case": { "color": "#FF9911" },

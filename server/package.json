@@ -1,6 +1,7 @@
 {
   "author": "LIL",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "~4.17.1"
   },
   "description": "Back-end for Chronolawgic legal timeline tool",
