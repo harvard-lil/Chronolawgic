@@ -11,6 +11,7 @@ const port = 3000;
 // TODO — Write Logic: Set /user/:id
 // TODO — Write Logic: Set /auth
 // TODO — Write Logic: Set /log
+// TODO — Write Logic: Set /bulk
 
 /*
 
@@ -82,6 +83,12 @@ Proposed authentication Request Actions
         * DELETE /timeline/:id
             * if timeline is public, it will hide it
             * if timeline is hidden, it will delete it permanently
+        * GET /bulk will export a zipped version of the entire DB including users w/blanked out
+          password hashes
+        * PUT /bulk replace the current DB with the output of GET /bulk. All user passwords
+          will need to be manually set for any users to log in
+        * PATCH /bulk will add timelines from the output of GET /bulk if their slugs don't exist
+          in the current DB. Optionally, it will overwrite timelines with the same name.
 
 Proposed User Object:
     {
