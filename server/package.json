@@ -9,7 +9,8 @@
   "main": "index.js",
   "name": "chronolawgic-server",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node server.js"
   },
   "version": "1.0.0"
 }
