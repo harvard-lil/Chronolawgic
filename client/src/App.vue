@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <header></header>
-    <ViewTimeline/>
-    <footer></footer>
+    <header class="header"></header>
+    <ViewTimeline class="timeline"/>
+    <footer class="footer"></footer>
   </div>
 </template>
 
@@ -18,17 +18,26 @@ export default {
 </script>
 
 <style lang="scss">
-$color-white: white;
-$color-black: #2e2e2e;
-
 #app {
-  display: grid;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "timeline"
+    "footer";
+}
+
+.header {
+  height: 2em;
+  background-color: deepskyblue;
+}
+.footer {
+  height: 4em;
+  background-color: cornflowerblue;
 }
 </style>
 

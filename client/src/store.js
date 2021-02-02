@@ -31,8 +31,8 @@ const store = new Vuex.Store({
                 Police: {id: "5", color: "#8899FF"},
                 Fascism: {id: "6", color: "#1199FF"},
             },
-            events: [
-                {
+            events: {
+                0: {
                     title: "Case 1",
                     categories: [1, 3],
                     cap_link: "https://cite.case.law/ill/1/176/",
@@ -41,7 +41,7 @@ const store = new Vuex.Store({
                     start_year: 1880,
                     thumb: 123,
                 },
-                {
+                1: {
                     title: "Case 2",
                     categories: [1, 2],
                     cap_link: "https://cite.case.law/ill/1/176/",
@@ -50,8 +50,19 @@ const store = new Vuex.Store({
                     start_year: 1881,
                     thumb: 123,
                     // What else do we need? Disposition? Collapsed/Visible? Hidden? Draft? Author?
+                },
+                2: {
+                    title: "Case 3",
+                    categories: [1, 2],
+                    cap_link: "https://cite.case.law/ill/1/176/",
+                    link: false,
+                    description: "Our first Supreme Court landmark. Though upholding the defendant's conviction for distributing his call to overthrow the government, the Court held, for the first time, that the Fourteenth Amendment \"incorporates\" the free speech clause of the First Amendment and is, therefore, applicable to the states.",
+                    start_year: 1880,
+                    thumb: 123,
+                    // What else do we need? Disposition? Collapsed/Visible? Hidden? Draft? Author?
                 }
-            ],
+            },
+            years: {1880: [0, 2], 1881: [1]},
             app_meta: { // DOESN'T GET EXPORTED — implementation specific
                 acl: [],
                 created_by: 1,
@@ -94,7 +105,7 @@ const store = new Vuex.Store({
         },
     },
     actions: {
-        authenticate(credentials=false) {
+        authenticate(credentials = false) {
             console.log("authenticating with :")
             console.log(credentials)
             return false
