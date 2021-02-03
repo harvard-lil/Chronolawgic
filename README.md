@@ -13,5 +13,5 @@ In server tab
 ```
 $ cd server
 $ npm install
-$ npm run
+$ npm dev
 ``` 
