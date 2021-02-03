@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "mongo-sanitize": "^1.1.0"
+  }
+}
